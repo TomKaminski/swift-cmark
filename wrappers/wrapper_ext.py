@@ -34,6 +34,9 @@ EXTENSIONS = (
   'table',
   'strikethrough',
   'tagfilter',
+  'superscript',
+  'subscriptstrikethrough',
+  'highlight',
   )
 
 # Use ctypes to access the functions in libcmark-gfm
