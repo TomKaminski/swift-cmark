@@ -7,7 +7,7 @@ add_library(libcmark-gfm-extensions
   strikethrough.c
   superscript.c
   highlight.c
-  subscriptstrikethrough.c
+  subscript.c
   table.c
   tagfilter.c
   tasklist.c)

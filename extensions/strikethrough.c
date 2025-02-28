@@ -30,7 +30,7 @@ static cmark_node *match(cmark_syntax_extension *self, cmark_parser *parser,
   res->start_column = cmark_inline_parser_get_column(inline_parser) - delims;
 
   if ((left_flanking || right_flanking) &&
-      (delims == 2 || (!(parser->options & CMARK_OPT_STRIKETHROUGH_DOUBLE_TILDE) && delims == 1))) {
+      (delims == 2)) {
     cmark_inline_parser_push_delimiter(inline_parser, character, left_flanking,
                                        right_flanking, res);
   }
@@ -140,7 +140,7 @@ static void html_render(cmark_syntax_extension *extension,
 static void plaintext_render(cmark_syntax_extension *extension,
                              cmark_renderer *renderer, cmark_node *node,
                              cmark_event_type ev_type, int options) {
-  renderer->out(renderer, node, "~", false, LITERAL);
+  renderer->out(renderer, node, "~~", false, LITERAL);
 }
 
 cmark_syntax_extension *create_strikethrough_extension(void) {

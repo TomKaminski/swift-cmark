@@ -35,7 +35,7 @@ EXTENSIONS = (
   'strikethrough',
   'tagfilter',
   'superscript',
-  'subscriptstrikethrough',
+  'subscript',
   'highlight',
   )
 
