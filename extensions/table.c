@@ -9,10 +9,11 @@
 #include <render.h>
 
 #include "ext_scanners.h"
-#include "strikethrough.h"
+//#include "strikethrough.h"
 #include "superscript.h"
 #include "highlight.h"
-#include "subscript.h"
+#include "subscriptstrikethrough.h"
+//#include "subscript.h"
 #include "table.h"
 #include "cmark-gfm-core-extensions.h"
 
@@ -702,10 +703,9 @@ static int can_contain(cmark_syntax_extension *extension, cmark_node *node,
     return child_type == CMARK_NODE_TEXT || child_type == CMARK_NODE_CODE ||
            child_type == CMARK_NODE_EMPH || child_type == CMARK_NODE_STRONG ||
            child_type == CMARK_NODE_LINK || child_type == CMARK_NODE_IMAGE || child_type == CMARK_NODE_ATTRIBUTE ||
-           child_type == CMARK_NODE_STRIKETHROUGH ||
            child_type == CMARK_NODE_HIGHLIGHT ||
            child_type == CMARK_NODE_SUPERSCRIPT ||
-           child_type == CMARK_NODE_SUBSCRIPT ||
+           child_type == CMARK_NODE_SUBSCRIPTSTRIKETHROUGH ||
            child_type == CMARK_NODE_HTML_INLINE ||
            child_type == CMARK_NODE_FOOTNOTE_REFERENCE;
   }
