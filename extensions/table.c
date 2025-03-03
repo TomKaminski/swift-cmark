@@ -9,11 +9,9 @@
 #include <render.h>
 
 #include "ext_scanners.h"
-//#include "strikethrough.h"
 #include "superscript.h"
 #include "highlight.h"
 #include "subscriptstrikethrough.h"
-//#include "subscript.h"
 #include "table.h"
 #include "cmark-gfm-core-extensions.h"
 

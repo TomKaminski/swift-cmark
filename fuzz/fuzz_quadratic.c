@@ -12,8 +12,6 @@ const char *extension_names[] = {
   "autolink",
   "superscript",
   "subscriptstrikethrough",
-//  "strikethrough",
-//  "subscript",
   "highlight",
   "table",
   "tagfilter",
