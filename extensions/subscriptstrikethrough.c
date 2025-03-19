@@ -97,7 +97,12 @@ static int can_contain(cmark_syntax_extension *extension, cmark_node *node,
 static void commonmark_render(cmark_syntax_extension *extension,
                               cmark_renderer *renderer, cmark_node *node,
                               cmark_event_type ev_type, int options) {
-  renderer->out(renderer, node, "~~", false, LITERAL);
+  
+  if(cmark_node_get_user_data(node) == "subscript") {
+    renderer->out(renderer, node, "~", false, LITERAL);
+  } else {
+    renderer->out(renderer, node, "~~", false, LITERAL);
+  }
 }
 
 static void latex_render(cmark_syntax_extension *extension,
